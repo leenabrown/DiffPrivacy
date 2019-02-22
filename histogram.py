@@ -44,8 +44,8 @@ histogram = plt.figure()
 
 # #print(x)
 x_mu = dps.dp_mean(newData, 1.0, 0.1 )
-print(x_mu)
-print(dataMean)
+#print(x_mu)
+#print(dataMean)
 
 hist = dps.dp_hist ( newData, num_bins=NUM_BINS, epsilon=1.0, delta=0.1, histtype = 'continuous' )
 

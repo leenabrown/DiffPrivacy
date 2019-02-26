@@ -3,7 +3,7 @@ import dp_stats as dps
 from matplotlib import pyplot as plt
 
 
-NUM_BINS = 3
+NUM_BINS = 10
 
 filename = "winequality-red.csv"
 data = np.loadtxt(filename, delimiter = ";", skiprows = 2, usecols = [1])
@@ -40,7 +40,7 @@ dataMean = sum / len(newData)
 
 # #print (sum / 10.0)
 
-histogram = plt.figure()
+
 
 # #print(x)
 x_mu = dps.dp_mean(newData, 1.0, 0.1 )
@@ -49,10 +49,11 @@ x_mu = dps.dp_mean(newData, 1.0, 0.1 )
 
 hist = dps.dp_hist ( newData, num_bins=NUM_BINS, epsilon=1.0, delta=0.1, histtype = 'continuous' )
 
+histogram = plt.figure(1)
+
 plt.hist(newData, bins = hist[1])
 
 plt.title("new Data")
-plt.show()
 
 
 
@@ -73,13 +74,17 @@ for j in range(NUM_BINS):
 
 print fakeData
 
+histogram2 = plt.figure(2)
+
 plt.hist(fakeData, bins = hist[1])
 plt.title("fake Data")
 
 
-#plt.show()
+plt.show()
 
-print(hist)
+
+
+
 
 
 

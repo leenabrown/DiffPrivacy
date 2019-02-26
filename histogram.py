@@ -69,7 +69,7 @@ for j in range(NUM_BINS):
 		if (i + offset) < len(fakeData):
 			fakeData[i + offset] = val
 		i = i + 1
-		offset = offset + int(round(hist[0][j]))
+	offset = offset + int(round(hist[0][j]))
 
 
 print fakeData
